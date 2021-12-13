@@ -14,7 +14,7 @@ const StatisticLine = (props) => {
 }
 
 const Statistics = ({good, neutral, bad}) => {
-	let total = good + neutral + bad
+	const total = good + neutral + bad
 
 	if(total === 0) {
 		return (
@@ -22,8 +22,8 @@ const Statistics = ({good, neutral, bad}) => {
 		)
 	}
 
-	let average = ((good) + (bad * -1))/total
-	let positivePercent = (good/total) * 100
+	const average = ((good) + (bad * -1))/total
+	const positivePercent = (good/total) * 100
 	
 	return (
 		<table>
