@@ -2,13 +2,7 @@ import React, {useState} from 'react'
 
 const Header = (props) => <h1>{props.text}</h1>
 
-const Button = (props) => {
-	return (
-		<button onClick = {props.onClick}>
-			{props.text}
-		</button>
-	)
-}
+const Button = (props) => <button onClick = {props.onClick}> {props.text} </button>
 
 const StatisticLine = (props) => {
 	return (
@@ -50,17 +44,9 @@ const App = () => {
 	const [neutral, setNeutral] = useState(0)
 	const [bad, setBad] = useState(0)
 
-	const increaseGood = () => {
-		setGood(good + 1)
-	}
-
-	const increaseNeutral = () => {
-		setNeutral(neutral + 1)
-	}
-
-	const increaseBad = () => {
-		setBad(bad + 1)
-	}
+	const increaseGood = () => setGood(good + 1)
+	const increaseNeutral = () => setNeutral(neutral + 1)
+	const increaseBad = () => setBad(bad + 1)
 
 	return (
 		<div>
@@ -88,4 +74,4 @@ const App = () => {
   	)
 }
 
-export default App;
+export default App
